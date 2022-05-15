@@ -1,9 +1,7 @@
 import React from 'react';
 const Badge = (props) => {
    return (
-      <div className={`badge ${!props.value ? 'badge--none' :''} `}>
-        <h4 className="heavy">{props.value || 0}</h4>
-      </div>
+      <div className={`badge ${props.color}${props.outline?' outline':''}${props.shadow?' shadow':''}`} {...props}/>
      )
 }
 export default Badge;

@@ -5,22 +5,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+require("core-js/modules/es.object.assign.js");
 
-require("./button.css");
+var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 const Button = props => {
-  return /*#__PURE__*/_react.default.createElement("button", {
-    className: "btn btn--".concat(props.kind, " CTA"),
-    "data-id": props.id,
-    type: props.type,
-    name: props.name,
-    value: props.value,
-    disabled: props.disabled,
-    onClick: props.handleClick
-  }, /*#__PURE__*/_react.default.createElement("h4", null, props.label));
+  console.log(props);
+  return /*#__PURE__*/_react.default.createElement("button", _extends({
+    className: "".concat(props.color).concat(props.outline ? ' outline' : '').concat(props.shadow ? ' shadow' : '')
+  }, props));
 };
 
 var _default = Button;
